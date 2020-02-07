@@ -28,7 +28,7 @@ let countries: HashMap<&str, i32> =
 vs
 const COUNTRIES: [(&str, i32);6] = [("Norway", 100), ("Denmark", 50), ("Iceland", 10)];
 let countries: HashMap<&str, i32> = COUNTRIES.iter().cloned().collect();
-vs
+vs                                                            _ _ can be substituted by &str, i32
 let mut hs:HashMap<&str, i32> = std::collections::HashMap::<_, _>::new(); // leaves HashMap ??
     for &(key, value) in COUNTRIES.iter() {
         hs.insert(key, value);
