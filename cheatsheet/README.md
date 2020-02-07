@@ -16,3 +16,21 @@ https://doc.rust-lang.org/std/primitive.str.html#method.parse
 let number: i32 = match "15".parse::<i32>() { Ok(number)  => number,
         Err(e) => -1, };
 ```
+### dict
+There are not native dictionaries but we can use HashMaps
+```
+use std::collections::HashMap;
+let countries: HashMap<&str, i32> =
+        [("Norway", 100),
+         ("Denmark", 50),
+         ("Iceland", 10)]
+         .iter().cloned().collect();
+vs
+const COUNTRIES: [(&str, i32);6] = [("Norway", 100), ("Denmark", 50), ("Iceland", 10)];
+let countries: HashMap<&str, i32> = COUNTRIES.iter().cloned().collect();
+vs
+let mut hs:HashMap<&str, i32> = std::collections::HashMap::<_, _>::new(); // leaves HashMap ??
+    for &(key, value) in COUNTRIES.iter() {
+        hs.insert(key, value);
+    }
+```
