@@ -35,7 +35,8 @@ let mut hs:HashMap<&str, i32> = std::collections::HashMap::<_, _>::new(); // lea
     }
 ```
 ### Split string
-
- let mut split = "10 0 0 2".split(" ");
-    //for s in split { println!("{}", s) } // print each String
-    let vec: Vec<&str> = split.collect::<Vec<&str>>(); // put them in a vector
+```
+let mut split = "10 0 0 2".split(" ");
+//for s in split { println!("{}", s) } // print each String
+let vec: Vec<&str> = split.collect::<Vec<&str>>(); // put them in a vector
+```
