@@ -16,7 +16,7 @@ https://doc.rust-lang.org/std/primitive.str.html#method.parse
 let number: i32 = match "15".parse::<i32>() { Ok(number)  => number,
         Err(e) => -1, };
 ```
-### dict
+### Dictionary
 There are not native dictionaries but we can use HashMaps
 ```
 use std::collections::HashMap;
@@ -34,3 +34,8 @@ let mut hs:HashMap<&str, i32> = std::collections::HashMap::<_, _>::new(); // lea
         hs.insert(key, value);
     }
 ```
+### Split string
+
+ let mut split = "10 0 0 2".split(" ");
+    //for s in split { println!("{}", s) } // print each String
+    let vec: Vec<&str> = split.collect::<Vec<&str>>(); // put them in a vector
