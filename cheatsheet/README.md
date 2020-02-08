@@ -40,3 +40,19 @@ let mut split = "10 0 0 2".split(" ");
 //for s in split { println!("{}", s) } // print each String
 let vec: Vec<&str> = split.collect::<Vec<&str>>(); // put them in a vector
 ```
+### Switch
+```
+match total {
+        // Match a single value
+        1 => return "B".to_string(),
+        // Match an inclusive range
+        13..=19 => {
+            println!("A teen.");
+            println!("Ranges from 13 to 19.");
+        }
+        // Match several values
+        2 | 3 | 5 | 7 | 11 => println!("This is a prime"),
+        // Handle the rest of cases
+        _ => println!("Ain't special"),
+    }
+```
