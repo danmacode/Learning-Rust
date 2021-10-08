@@ -1,0 +1,3 @@
+# Rust target dirs & lock files
+\target
+**/Cargo.lock
