@@ -64,7 +64,8 @@ fn main() {
     }
     // to read in a function that returns a Result,
     println!("===================================");
-    let json2: JsonFile = read_json_file("data2.json").unwrap();
+    let r = read_json_file("data3.json");
+    let json2: JsonFile = if r.is_ok() { r.unwrap() } else { json };
     let jstring2: String = serde_json::to_string_pretty(&json2).unwrap();
     println!("{}", jstring2);
 }
